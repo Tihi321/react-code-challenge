@@ -4,13 +4,21 @@
   "version": "1.1.0",
   "private": true,
   "dependencies": {
+    "lodash": "^4.17.21",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-responsive": "^8.2.0",
     "react-scripts": "3.0.1",
-    "styled-components": "^5.3.1"
+    "reselect": "^4.0.0",
+    "styled-components": "^5.3.1",
+    "styled-normalize": "^8.0.7",
+    "ts-use": "^1.1.5",
+    "tsl-utils": "^1.0.2"
   },
   "devDependencies": {
     "@types/jest": "^27.0.1",
+    "@types/lodash": "^4.14.173",
+    "@types/react-responsive": "^8.0.2",
     "@types/node": "^16.9.2",
     "@types/react": "^17.0.21",
     "@types/react-dom": "^17.0.9",
