@@ -1,11 +1,7 @@
 import { useStateStore } from "ts-use";
-import { ETheme, StateKeys } from "../enums/store";
 import { useLocalStorage } from "ts-use";
 import { LocalStorageKeys } from "../enums/localStorage";
-
-export const initialState = {
-  [StateKeys.Theme]: ETheme.Dark,
-};
+import { initialState } from "./initialState";
 
 export const useContextStateProvider = () => {
   const { onStateObjectChange } = useStateStore();
