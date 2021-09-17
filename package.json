@@ -7,12 +7,14 @@
     "lodash": "^4.17.21",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "redux": "^4.0.5",
+    "react-redux": "^7.2.0",
     "react-responsive": "^8.2.0",
     "react-scripts": "3.0.1",
     "reselect": "^4.0.0",
     "styled-components": "^5.3.1",
     "styled-normalize": "^8.0.7",
-    "ts-use": "^1.1.5",
+    "ts-use": "^1.2.0",
     "tsl-utils": "^1.0.2"
   },
   "devDependencies": {

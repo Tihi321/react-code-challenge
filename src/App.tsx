@@ -1,7 +1,9 @@
 import React from "react";
 import { createGlobalStyle } from "styled-components";
 import { Normalize } from "styled-normalize";
+import { withStateProvider } from "ts-use";
 import { Main } from "./components/Main";
+import { initialState, useContextStateProvider } from "./hooks/useContextStateProvider";
 import { coreStyles, headingStyles, textStyles } from "./styles/core";
 import { ThemeContainer } from "./themes";
 
@@ -11,7 +13,9 @@ const CoreStyle = createGlobalStyle`
   ${textStyles}
 `;
 
-function App() {
+const App = () => {
+  useContextStateProvider();
+
   return (
     <ThemeContainer>
       <Normalize />
@@ -19,6 +23,6 @@ function App() {
       <Main />
     </ThemeContainer>
   );
-}
+};
 
-export default App;
+export default withStateProvider(initialState)(App);
