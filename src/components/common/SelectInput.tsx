@@ -1,4 +1,5 @@
 import React from "react";
+import map from "lodash/map";
 import styled from "styled-components";
 
 import { searchBackgroundColor, searchBorderColor, searchTextColor } from "../../themes";
@@ -35,7 +36,7 @@ export const Select = ({ onChange, value, options, title }: ISelectProps) => {
         }}
         multiple
       >
-        {options.map((option, index) => (
+        {map(options, (option, index) => (
           <option value={option} key={`${option}-${index}`}>
             {option}
           </option>

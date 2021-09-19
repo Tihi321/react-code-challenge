@@ -12,7 +12,7 @@
     "reselect": "^4.0.0",
     "styled-components": "^5.3.1",
     "styled-normalize": "^8.0.7",
-    "ts-use": "^1.2.1",
+    "ts-use": "^1.2.5",
     "tsl-utils": "^1.0.2"
   },
   "devDependencies": {

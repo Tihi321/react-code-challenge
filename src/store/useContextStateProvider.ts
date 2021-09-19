@@ -6,7 +6,7 @@ import { StateKeys } from "../enums/store";
 import { initialState } from "./initialState";
 
 export const useContextStateProvider = () => {
-  const { onStateChange } = useStateStore();
+  const { onStateObjectChange } = useStateStore();
   const { data: theme } = useLocalStorage(
     LocalStorageKeys.Theme,
     initialState.theme
@@ -33,7 +33,7 @@ export const useContextStateProvider = () => {
   );
 
   useEffect(() => {
-    onStateChange({
+    onStateObjectChange({
       [StateKeys.Theme]: theme,
       [StateKeys.SearchTerm]: searchTerm,
       [StateKeys.CategoryDiet]: JSON.parse(categoryDiet as string),

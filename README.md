@@ -43,6 +43,16 @@ The web application should include the following functionality:
 - Write some unit-tests
 - Make it look good on mobile as well as desktop
 
+## Additional code
+
+My helper NPM libraries used in the code for global state, local storage and fetch can be checked at these repos
+
+TS Use
+https://github.com/Tihi321/ts-use
+
+TSL Utils
+https://github.com/Tihi321/tsl-utils
+
 ## Getting started
 
 Before start, create .env file to simulate secret and add these 2 lines of code

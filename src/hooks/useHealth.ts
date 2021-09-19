@@ -6,7 +6,7 @@ import { getCategoryHealthWith } from "../selectors";
 
 export const useHealth = () => {
   const { stateSelector, onStateKeyChange } = useStateStore();
-  const { setLocalStorage } = useLocalStorage(LocalStorageKeys.CategoryHealth);
+  const { setLocalStorage } = useLocalStorage(LocalStorageKeys.CategoryHealth, "", false);
 
   const setValues = (terms: string[]) => {
     onStateKeyChange(StateKeys.CategoryHealth, terms);

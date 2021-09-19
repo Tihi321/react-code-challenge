@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { Header } from "./layout/Header";
 import { Sidebar } from "./layout/Sidebar";
 import { Content } from "./layout/Content";
+import { useFetchData } from "../hooks/useFetchData";
 
 const AppContainer = styled.div`
   height: 100vh;
@@ -14,6 +15,7 @@ const AppContainer = styled.div`
 `;
 
 export const Main = () => {
+  useFetchData();
   return (
     <AppContainer>
       <Header />

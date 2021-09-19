@@ -5,7 +5,7 @@ import { LocalStorageKeys } from "../enums/localStorage";
 
 export const useTheme = () => {
   const { stateSelector, onStateKeyChange } = useStateStore();
-  const { setLocalStorage } = useLocalStorage(LocalStorageKeys.Theme);
+  const { setLocalStorage } = useLocalStorage(LocalStorageKeys.Theme, "", false);
 
   const theme = useStateSelector(getThemeWith(stateSelector)) as ETheme;
 
