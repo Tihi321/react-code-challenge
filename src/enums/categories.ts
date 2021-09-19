@@ -1,0 +1,1 @@
+export const DIET_OPTIONS = ["", "balanced", "celery-free", "crustacean-free", "dairy-free", "DASH"];

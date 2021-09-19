@@ -2,14 +2,10 @@ import { useStateStore, useStateSelector, useLocalStorage } from "ts-use";
 import { getThemeWith } from "../selectors";
 import { ETheme, StateKeys } from "../enums/store";
 import { LocalStorageKeys } from "../enums/localStorage";
-import { initialState } from "../store/initialState";
 
 export const useTheme = () => {
   const { stateSelector, onStateKeyChange } = useStateStore();
-  const { setLocalStorage } = useLocalStorage(
-    LocalStorageKeys.Theme,
-    initialState.theme
-  );
+  const { setLocalStorage } = useLocalStorage(LocalStorageKeys.Theme);
 
   const theme = useStateSelector(getThemeWith(stateSelector)) as ETheme;
 

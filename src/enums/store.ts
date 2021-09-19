@@ -6,4 +6,5 @@ export enum ETheme {
 export enum StateKeys {
   Theme = "theme",
   SearchTerm = "searchTerm",
+  CategoryDiet = "categoryDiet",
 };
