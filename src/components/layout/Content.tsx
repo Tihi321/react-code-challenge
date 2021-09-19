@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { useContent } from "../../hooks/useContent";
+import { SearchResults } from "./SearchResults";
 
 export const ContentContainer = styled.main`
   grid-area: content;
@@ -7,5 +9,6 @@ export const ContentContainer = styled.main`
 `;
 
 export const Content = () => {
-  return <ContentContainer>[content]</ContentContainer>;
+  const { showLoader } = useContent();
+  return <ContentContainer>{showLoader ? "Loader" : <SearchResults />}</ContentContainer>;
 };

@@ -5,7 +5,7 @@ import { getSearchTermWith } from "../selectors";
 
 export const useSearch = () => {
   const { stateSelector, onStateKeyChange } = useStateStore();
-  const { setLocalStorage } = useLocalStorage(LocalStorageKeys.SearchTerm);
+  const { setLocalStorage } = useLocalStorage(LocalStorageKeys.SearchTerm, "", false);
 
   const setSearchTerm = (term: string) => {
     onStateKeyChange(StateKeys.SearchTerm, term);

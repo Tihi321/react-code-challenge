@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { useSubmit } from "../../hooks/useSubmit";
+import { useSidebar } from "../../hooks/useSidebar";
 import { asideBackgroundColor } from "../../themes";
 import { CuisineType } from "../categories/CuisineType";
 import { Diet } from "../categories/Diet";
@@ -17,7 +17,7 @@ const SidebarContainer = styled.nav`
 `;
 
 export const Sidebar = () => {
-  const { submitSearch } = useSubmit();
+  const { submitSearch, searchDisabled, switchBookmarks, useBookmarks } = useSidebar();
   return (
     <SidebarContainer>
       <Rows>
@@ -26,9 +26,11 @@ export const Sidebar = () => {
         <Health />
         <CuisineType />
         <MealType />
-        <Button onClick={submitSearch}>Submit Search</Button>
+        <Button disabled={searchDisabled} onClick={submitSearch}>
+          Submit Search
+        </Button>
       </Rows>
-      <p>Bookmarked recipes</p>
+      <Button onClick={switchBookmarks}>{useBookmarks ? "Hide" : "Show"} bookmarks</Button>
     </SidebarContainer>
   );
 };

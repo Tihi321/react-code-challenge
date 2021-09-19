@@ -6,7 +6,7 @@ import { getCategoryDietWith } from "../selectors";
 
 export const useDiet = () => {
   const { stateSelector, onStateKeyChange } = useStateStore();
-  const { setLocalStorage } = useLocalStorage(LocalStorageKeys.CategoryDiet);
+  const { setLocalStorage } = useLocalStorage(LocalStorageKeys.CategoryDiet, "", false);
 
   const setValues = (terms: string[]) => {
     onStateKeyChange(StateKeys.CategoryDiet, terms);
