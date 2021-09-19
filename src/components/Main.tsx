@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
-import { Header } from "./Header";
-import { Sidebar } from "./Sidebar";
-import { Content } from "./Content";
+import { Header } from "./layout/Header";
+import { Sidebar } from "./layout/Sidebar";
+import { Content } from "./layout/Content";
 
 const AppContainer = styled.div`
   height: 100vh;
@@ -16,11 +16,11 @@ const AppContainer = styled.div`
 export const Main = () => {
   return (
     <AppContainer>
-    <Header>The Recipe Collection</Header>
+      <Header>The Recipe Collection</Header>
 
-    <Sidebar />
+      <Sidebar />
 
-    <Content>[content]</Content>
-  </AppContainer>
+      <Content>[content]</Content>
+    </AppContainer>
   );
-}
+};

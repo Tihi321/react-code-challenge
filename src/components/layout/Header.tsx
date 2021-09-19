@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { headerBGColor, headerTextColor } from "../themes";
+import { headerBGColor, headerTextColor } from "../../themes";
 
 export const Header = styled.header`
   grid-area: header;

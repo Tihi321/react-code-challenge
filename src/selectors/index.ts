@@ -13,3 +13,9 @@ export const getSearchTermWith = (stateSelector: any) =>
     stateSelector,
     state => get(state, StateKeys.SearchTerm)
   );
+
+export const getCategoryDietWith = (stateSelector: any) =>
+  createSelector(
+    stateSelector,
+    state => get(state, StateKeys.CategoryDiet)
+  );

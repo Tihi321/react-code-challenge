@@ -13,19 +13,19 @@ The recipes API is called [Edamam Recipe Search API](https://developer.edamam.co
 The web application should include the following functionality:
 
 - **Search view**
-    - Display a search form with a search field.
-    - Optional:
-	    - Include advanced search filtering input fields for `diet`, `health`, `cuisineType`, `mealType`, `dishType` and `calories` range.
-	    - Display search results list that consists of recipe `picture`, `label`, `calories`, `healthLabels` and `dietLabels`
-	    - UI to load more results
+  - Display a search form with a search field.
+  - Optional:
+    - Include advanced search filtering input fields for `diet`, `health`, `cuisineType`, `mealType`, `dishType` and `calories` range.
+    - Display search results list that consists of recipe `picture`, `label`, `calories`, `healthLabels` and `dietLabels`
+    - UI to load more results
 - **Recipe Info view/dialog/modal** when a user clicks on recipe search result
-	- UI to bookmark the recipe
-	- Optional:
-	    - Display more information about the recipe like `ingredients`, `nutrients` and `digest` details.
+  - UI to bookmark the recipe
+  - Optional:
+    - Display more information about the recipe like `ingredients`, `nutrients` and `digest` details.
 - **Bookmarked Recipes view**
-	- List of all bookmarked recipes.
+  - List of all bookmarked recipes.
     - Optional:
-	    - UI to remove recipes from the list.
+      - UI to remove recipes from the list.
 
 ## Requirements and Restrictions
 
@@ -37,13 +37,20 @@ The web application should include the following functionality:
 ### Optional:
 
 - Implement a solution to store and manage the app’s state
-	- Use state at least for handling bookmarks
+  - Use state at least for handling bookmarks
 - Use `localStorage` as a persistence layer for the state
 - Use TypeScript
 - Write some unit-tests
 - Make it look good on mobile as well as desktop
 
 ## Getting started
+
+Before start, create .env file to simulate secret and add these 2 lines of code
+
+```
+REACT_APP_RECIPE_API_ID=df53c267
+REACT_APP_RECIPE_API_KEY=bd80595496a524a833554462aa41a04c
+```
 
 This repository is setup with `create-react-app` to get you started quickly. To start the app you just need to clone the repository and run the following commands:
 
