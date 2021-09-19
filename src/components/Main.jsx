@@ -18,10 +18,7 @@ export const Main = () => {
     <AppContainer>
     <Header>The Recipe Collection</Header>
 
-    <Sidebar>
-      <p>Search recipes</p>
-      <p>Bookmarked recipes</p>
-    </Sidebar>
+    <Sidebar />
 
     <Content>[content]</Content>
   </AppContainer>

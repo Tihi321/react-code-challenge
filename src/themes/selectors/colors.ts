@@ -20,3 +20,6 @@ export const defaultTextColor = primaryColor;
 export const headerBGColor = focusColor;
 export const headerTextColor = primaryColor;
 export const asideBackgroundColor = secondaryColor;
+export const searchBorderColor = focusColor;
+export const searchBackgroundColor = primaryColor;
+export const searchTextColor = focusColor;

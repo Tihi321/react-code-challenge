@@ -7,3 +7,9 @@ export const getThemeWith = (stateSelector: any) =>
     stateSelector,
     state => get(state, StateKeys.Theme)
   );
+
+export const getSearchTermWith = (stateSelector: any) =>
+  createSelector(
+    stateSelector,
+    state => get(state, StateKeys.SearchTerm)
+  );
