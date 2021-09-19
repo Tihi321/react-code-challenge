@@ -16,11 +16,9 @@ const AppContainer = styled.div`
 export const Main = () => {
   return (
     <AppContainer>
-      <Header>The Recipe Collection</Header>
-
+      <Header />
       <Sidebar />
-
-      <Content>[content]</Content>
+      <Content />
     </AppContainer>
   );
 };

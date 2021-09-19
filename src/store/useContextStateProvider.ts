@@ -19,13 +19,28 @@ export const useContextStateProvider = () => {
     LocalStorageKeys.CategoryDiet,
     JSON.stringify(initialState.categoryDiet)
   );
+  const { data: categoryHealth } = useLocalStorage(
+    LocalStorageKeys.CategoryHealth,
+    JSON.stringify(initialState.categoryHealth)
+  );
+  const { data: cuisineType } = useLocalStorage(
+    LocalStorageKeys.CategoryCuisineType,
+    JSON.stringify(initialState.cuisineType)
+  );
+  const { data: mealType } = useLocalStorage(
+    LocalStorageKeys.CategoryMealType,
+    JSON.stringify(initialState.mealType)
+  );
 
   useEffect(() => {
     onStateChange({
       [StateKeys.Theme]: theme,
       [StateKeys.SearchTerm]: searchTerm,
-      [StateKeys.CategoryDiet]: JSON.parse(categoryDiet as string)
+      [StateKeys.CategoryDiet]: JSON.parse(categoryDiet as string),
+      [StateKeys.CategoryHealth]: JSON.parse(categoryHealth as string),
+      [StateKeys.CategoryCuisineType]: JSON.parse(cuisineType as string),
+      [StateKeys.CategoryMealType]: JSON.parse(mealType as string)
     });
     // eslint-disable-next-line
-  }, [theme, searchTerm, categoryDiet]);
+  }, [theme, searchTerm, categoryDiet, categoryHealth, cuisineType, mealType]);
 };

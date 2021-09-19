@@ -19,3 +19,21 @@ export const getCategoryDietWith = (stateSelector: any) =>
     stateSelector,
     state => get(state, StateKeys.CategoryDiet)
   );
+
+export const getCategoryHealthWith = (stateSelector: any) =>
+  createSelector(
+    stateSelector,
+    state => get(state, StateKeys.CategoryHealth)
+  );
+
+export const getCategoryCuisineTypeWith = (stateSelector: any) =>
+  createSelector(
+    stateSelector,
+    state => get(state, StateKeys.CategoryCuisineType)
+  );
+
+export const getCategoryMealTypeWith = (stateSelector: any) =>
+  createSelector(
+    stateSelector,
+    state => get(state, StateKeys.CategoryMealType)
+  );
