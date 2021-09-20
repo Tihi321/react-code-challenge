@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import isEmpty from 'lodash/isEmpty';
 import { useStateSelector, useStateStore, useFetch, TFetchUrl } from "ts-use";
-import { getSearchQueryStateWith, getSearchQueryObjectWith, getSearchTermWith } from "../selectors";
+import { getSearchQueryStateWith, getSearchQueryObjectWith, getSearchTermWith, getOverflowWith } from "../selectors";
 import { StateKeys } from '../enums/store';
 
 
@@ -25,4 +25,8 @@ export const useFetchData = () => {
     onStateKeyChange(StateKeys.SearchRecipes, data);
     // eslint-disable-next-line
   }, [data]);
+
+  return {
+    overflow: useStateSelector(getOverflowWith(stateSelector)) as boolean
+  }
 }

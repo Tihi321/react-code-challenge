@@ -15,13 +15,14 @@ const SearchResultsList = styled.div`
 export const SearchResults = () => {
   const [openModal, setOpenModal] = useState(false);
   const [selectedRecipe, setSelectedRecipe] = useState({} as TSelectedRecipe);
-  const { results, getRecipe } = useSearchResults();
+  const { results, getRecipe, setOverflow } = useSearchResults();
 
   const onRecipeSelect = (uri: string) => {
     const recipe = getRecipe(uri);
     if (recipe !== undefined) {
       setSelectedRecipe(recipe);
       setOpenModal(true);
+      setOverflow(true);
     }
   };
   return (
@@ -49,6 +50,7 @@ export const SearchResults = () => {
           uri={selectedRecipe.uri}
           onClick={() => {
             setOpenModal(false);
+            setOverflow(false);
             setSelectedRecipe({} as TSelectedRecipe);
           }}
         />
