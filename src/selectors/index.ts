@@ -73,6 +73,12 @@ export const getUseBookmarksStateWith = (stateSelector: any) =>
     state => get(state, [StateKeys.UseBookmarks])
   );
 
+export const getOverflowWith = (stateSelector: any) =>
+  createSelector(
+    stateSelector,
+    state => get(state, [StateKeys.Overflow])
+  );
+
 export const getSearchQueryObjectWith = (stateSelector: any) =>
   createSelector(
     getSearchTermWith(stateSelector),

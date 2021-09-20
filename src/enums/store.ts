@@ -5,6 +5,7 @@ export enum ETheme {
 
 export enum StateKeys {
   Theme = "theme",
+  Overflow = "overflow",
   SearchRecipes = "searchRecipes",
   BookmarkedRecipes = "bookmarkedRecipes",
   UseBookmarks = "useBookmarks",
